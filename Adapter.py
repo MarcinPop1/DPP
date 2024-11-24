@@ -1,10 +1,14 @@
+#"""Wyobraź sobie, że system biblioteczny musi importować dane o książkach z różnych formatów 
+#(np. JSON, CSV). Stwórz klasę adaptera,
+# która pozwoli na przetwarzanie i integrację różnych formatów danych do standardowego formatu używanego w LibraryCatalog"""
+
 import csv
 ####################################################Adapter####################################
-class Adapter:
+class Adapter:# przyjmuje ścieżkę do pliku CSV
     def __init__(self, sciezka_pliku):
         self.sciezka_pliku = sciezka_pliku
 
-    def wczytaj_dane(self):
+    def wczytaj_dane(self): #odczytuje tytuły książek z cvs
         ksiazki = []
         with open(self.sciezka_pliku, newline='') as plik:
             reader = csv.reader(plik)
