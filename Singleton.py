@@ -1,8 +1,11 @@
+#Zaimplementuj klasę LibraryCatalog, która zapewnia, że w programie istnieje tylko jedna instancja katalogu.
+#Klasa ta będzie odpowiedzialna za przechowywanie i zarządzanie danymi o książkach.
+#
 
-class Singleton:
+class LibraryCatalog:
     _instancja = None #Pole służące do przechowywania instancji singleton powinno
 
-    def __new__(cls, *args, **kwargs):
+    def __new__(cls, *args, **kwargs): #tworzenie nowej instancji - Jeśli instancja już istnieje  zwraca ją zamiast tworzyć nową
         if not cls._instancja:
             cls._instancja = super().__new__(cls)
             cls._instancja.ksiazki = []
@@ -19,9 +22,9 @@ class Singleton:
 
 
 # Test
-katalog1 = Singleton()
+katalog1 = LibraryCatalog()
 katalog1.dodaj_ksiazke("Miasteczko dobrych dusz")
-katalog2 = Singleton()
+katalog2 = LibraryCatalog()
 katalog2.wyswietl_ksiazki()
 print("Czy katalog1 to katalog2:", katalog1 is katalog2)
 #test 2 
