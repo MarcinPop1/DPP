@@ -1,4 +1,8 @@
-####################################Factory###########################################
+## Zaimplementuj UserFactory,
+## która tworzy różne typy obiektów użytkowników (np. Student, Nauczyciel, Bibliotekarz) na podstawie danych wejściowych.
+## Każdy typ użytkownika może mieć różne uprawnienia do wypożyczania książek."""
+
+####################################Fac tory###########################################
 
 class User:
     def __init__(self, imie, typ):
