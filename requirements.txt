@@ -1,5 +1,5 @@
-pytest==7.4.2
-pytest-cov==4.1.0
-mock==5.0.3
-unittest-xml-reporting==3.0.4
-csvkit==1.0.8
+pytest
+pytest-cov
+mock
+unittest-xml-reporting
+csvkit
